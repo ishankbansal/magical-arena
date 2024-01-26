@@ -4,7 +4,8 @@
   "description": "Magical arena game",
   "main": "arena_game.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node src/arena_game.js"
   },
   "author": "Ishank Bansal",
   "license": "ISC",

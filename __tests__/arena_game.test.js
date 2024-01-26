@@ -1,4 +1,4 @@
-const {startGame, getDiceRoll, handleGame, Player } = require("./../src/arena_game");
+const {getDiceRoll, handleGame, Player } = require("./../src/arena_game");
 
 test("player should roll the die between 1 to 6, both inclusive", () => {
     const diceResult = getDiceRoll()
