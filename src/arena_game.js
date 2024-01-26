@@ -1,4 +1,4 @@
-class player {
+class Player {
   constructor(id, health, strength, attack) {
     this.id = id;
     this.health = health;
@@ -8,14 +8,14 @@ class player {
 }
 
 // initialisation of players
-const playerA = new player(0, 50, 5, 10);
-const playerB = new player(1, 100, 10, 5);
+const playerA = new Player(0, 50, 5, 10);
+const playerB = new Player(1, 100, 10, 5);
 
 console.log(
-  `Player A:- \nHealth: ${playerA.health}\nStrength: ${playerA.strength}\nAttack: ${playerA.attack}\n`
+  `Player A: \nHealth: ${playerA.health}\nStrength: ${playerA.strength}\nAttack: ${playerA.attack}\n`
 );
 console.log(
-  `Player B:- \nHealth: ${playerB.health}\nStrength: ${playerB.strength}\nAttack: ${playerB.attack}\n`
+  `Player B: \nHealth: ${playerB.health}\nStrength: ${playerB.strength}\nAttack: ${playerB.attack}\n`
 );
 
 let intervalID, round = 1;
@@ -30,7 +30,7 @@ function getDiceRoll() {
 // logic for attacking and defending
 function handleGame (attacker, defender){
     
-    // either of the player's health becomes 0
+    // either of the Player's health becomes 0
     if (attacker.health == 0) {
       console.log(`Player ${defender.id == 0 ? "A" : "B"} wins!`);
       clearInterval(intervalID);
@@ -94,4 +94,6 @@ const startGame = () => {
     }, 1000)
 }
 
-startGame();
+// startGame();
+
+module.exports = { startGame, getDiceRoll, handleGame, Player };
