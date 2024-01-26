@@ -12,3 +12,12 @@ test("player shouldn't have negative health, strength, attack", () => {
     expect(playerA.strength).toBeGreaterThanOrEqual(0);
     expect(playerA.attack).toBeGreaterThanOrEqual(0);
 });
+
+test("defender's health should decrease while playing the game", () => {
+  const attacker = new Player(0, 50, 5, 10);
+  const defender = new Player(0, 100, 0, 10);
+
+  handleGame(attacker, defender);
+
+  expect(defender.health).toBeLessThan(100);
+});
