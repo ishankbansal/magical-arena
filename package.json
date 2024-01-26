@@ -1,0 +1,11 @@
+{
+  "name": "magical-arena",
+  "version": "1.0.0",
+  "description": "Magical arena game",
+  "main": "arena_game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ishank Bansal",
+  "license": "ISC"
+}
